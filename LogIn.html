@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Lost & Found</title>
 		<link rel="stylesheet" href="Style.css">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+		<meta http-equiv="Content-Type" content="text/html; charset=tis-620">
 	</head>
 	
 	<body>
@@ -39,21 +43,79 @@
 		
 			<!--Form Area-->
 			<div class="FormArea">
-				<h1>Log in</h1>
-				<form action="">
-					Username <input type="text" name="username" class="inputbox"></br>
-					Password <input type="password" name="password" class="inputbox"></br>
-					<input type="submit" value="Log In">
-				</form> 
-				<hr class="splitsection">
-				<h1>Register</h1></br>
+				
 				<form action="" class="FormArea">
-					ชื่อ: <input type="text" name="firstname"> **</br>
-					นามสกุล: <input type="text" name="lasttname"> **</br>
-					Email: <input type="Email" name="email"> **</br>
-					Username: <input type="text" name="username"> <input type="button" value="Check" onclick="chk()" name="chkuser"></br>
-					Password: <input type="Password" name="password"> ควรมี 8 - 12 หลัก</br>
-					<input type="Submit" value="Register" onclick="" name="regsumbit"></br>
+					<fieldset>
+						<legend><h1>Log in</h1></legend>
+						<table class="inputform">
+							<tr>
+								<td class="topic">Username</td>
+								<td class="input">
+									<input type="text" name="username" class="inputbox"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="topic">Password</td>
+								<td class="input">
+									<input type="password" name="password" class="inputbox"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="topic"></td>
+								<td class="input"><input type="submit" value="Log In"/></td>
+							</tr>
+						</table>
+
+					</fieldset>
+				</form> 
+				
+				<form action="" class="FormArea">
+					<fieldset>
+						<legend><h1>Register</h1></legend>
+						<table class="inputform">
+							<tr>
+								<td class="topic"></td>
+								<td class="input"></td>
+							</tr>
+							<tr>
+								<td class="topic">First name</td>
+								<td class="input">
+									<input type="text" name="firstname"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="topic">Last name</td>
+								<td class="input">
+									<input type="text" name="lasttname"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="topic">Email</td>
+								<td class="input">
+									<input type="text" name="email"/>
+								</td>
+							</tr>
+							<tr>
+								<td class="topic">Username</td>
+								<td class="input">
+									<input type="text" name="username"/> 
+									<input type="button" value="Check" onclick="chk()" name="chkuser">
+								</td>
+							</tr>
+							<tr>
+								<td class="topic">Password</td>
+								<td class="input">
+									<input type="Password" name="password"/> ต้องมี 8 - 12 หลัก
+								</td>
+							</tr>
+							<tr>
+								<td class="topic"></td>
+								<td class="input">
+									<input type="Submit" value="Register" onclick="" name="regsumbit"/>
+								</td>
+							</tr>
+						</table>
+					</fieldset>
 				</form>
 			</div>
 		</div>
