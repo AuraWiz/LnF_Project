@@ -1,26 +1,63 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<link rel="stylesheet" href="Style.css">
 	</head>
 	
 	<body>
-		<a href="Homepage.html">Home </a>
-		<h1>เพิ่มประกาศใหม่</h1></br>
-		<form>
-			กรุณาอัพโหลดภาพคนหายแบบเห็นหน้าชัด </br>
-			<input type="file" name="lostpic"></br>
-			ชื่อ - สกุล(คนหาย) <input type="text" name="lostname"></br>
-			เพศ <input type="radio" name="lostmale">ชาย <input type="radio" name="lostfemale">หญิง</br>
-			อายุ <input type="number" name="lostage" min="0" max="130"> ปี</br>
-			วันที่หาย <input type="date" name="lostday"></br>
-			สถานที่หาย <input type="text" name="lostplace"></br>
-			รายละเอียดเพิ่มเติม <input type="textarea" name="lostinfo"></br>
-			
-			ชื่อ - สกุล (ผู้ประกาศ) <input type="text" name="ownername"></br>
-			เบอร์โทรศัพท์ (สำหรับติดต่อกลับ) <input type="text" name="ownertel"></br>
-			ช่องทางอื่นๆ (สำหรับติดต่อกลับ)<input type="textarea" name="ownerinfo"></br>
-			
-			<input type="Submit" value="Post" onclick=""></br>
-		</form>
+		<div id="pagearea">
+			<!--Menu Bar-->
+			<div id="header">
+				<div id="nav-bar">
+					<ul>
+						<li>
+							<a href="Homepage.html"  class="menustyle">Home</a>
+						</li>
+						<li>
+							<a href=""  class="menustyle">Contact</a>
+						</li>
+						<li>
+							<a href="LogIn.html"  class="menustyle">Sign in</a>
+						</li>
+					</ul>
+					
+					<!--<ul>
+						<li>
+							<a href="Homepage.html"  class="menustyle">Home</a>
+						</li>
+						<li>
+							<a href="UpdateNotice.html"  class="menustyle">Manage Post</a>
+						</li>
+						<li>
+							<a href=""  class="menustyle">Profile</a>
+						</li>
+						<li>
+							<a href=""  class="menustyle">Sign out</a>
+						</li>
+					</ul>-->
+			</div>
+		
+		
+			<!--Form Area-->
+			<div class="FormArea">
+				<h1>เพิ่มประกาศใหม่</h1></br>
+				<form>
+					<input type="file" name="lostpic"></br>
+					กรุณาอัพโหลดภาพคนหายแบบเห็นหน้าชัด </br>
+					ชื่อ - สกุล(คนหาย) <input type="text" name="lostname"></br>
+					เพศ <input type="radio" name="lostmale">ชาย <input type="radio" name="lostfemale">หญิง</br>
+					อายุ <input type="number" name="lostage" min="0" max="130"> ปี</br>
+					วันที่หาย <input type="date" name="lostday"></br>
+					สถานที่หาย <input type="text" name="lostplace"></br>
+					รายละเอียดเพิ่มเติม <input type="textarea" name="lostinfo"></br>
+					
+					ชื่อ - สกุล (ผู้ประกาศ) <input type="text" name="ownername"></br>
+					เบอร์โทรศัพท์ (สำหรับติดต่อกลับ) <input type="text" name="ownertel"></br>
+					ช่องทางอื่นๆ (สำหรับติดต่อกลับ)<input type="textarea" name="ownerinfo"></br>
+					
+					<input type="Submit" value="Post" onclick=""></br>
+				</form>
+			</div>
+		</div>
 	</body>
 </html>
