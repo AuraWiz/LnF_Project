@@ -1,7 +1,11 @@
 <!DOCTYPE html>
 <html>
 	<head>
+		<title>Lost & Found</title>
 		<link rel="stylesheet" href="Style.css">
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+		<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
+		<meta http-equiv="Content-Type" content="text/html; charset=tis-620">
 	</head>
 	
 	<body>
@@ -39,22 +43,61 @@
 		
 			<!--Form Area-->
 			<div class="FormArea">
-				<h1>เพิ่มประกาศใหม่</h1></br>
-				<form>
-					<input type="file" name="lostpic"></br>
-					กรุณาอัพโหลดภาพคนหายแบบเห็นหน้าชัด </br>
-					ชื่อ - สกุล(คนหาย) <input type="text" name="lostname"></br>
-					เพศ <input type="radio" name="lostmale">ชาย <input type="radio" name="lostfemale">หญิง</br>
-					อายุ <input type="number" name="lostage" min="0" max="130"> ปี</br>
-					วันที่หาย <input type="date" name="lostday"></br>
-					สถานที่หาย <input type="text" name="lostplace"></br>
-					รายละเอียดเพิ่มเติม <input type="textarea" name="lostinfo"></br>
+				<form action="" class="FormArea">
+					<fieldset>
+						<legend><h1>เพิ่มประกาศใหม่</h1></legend>
+						<table class="inputform">
+							<tr>
+								<td class="topic">ภาพผู้สูญหาย</td>
+								<td class="input">
+									<input type="file" name="lostpic"></br>
+									<a class="comment">กรุณาอัพโหลดภาพคนหายแบบเห็นหน้าชัด </a>
+								</td>
+							</tr>
+							<tr>
+								<td class="topic">ชื่อ - สกุล ผู้สูญหาย</td>
+								<td class="input">
+									<input type="text" name="lostname">
+								</td>
+							</tr>
+							<tr>
+								<td class="topic">เพศ</td>
+								<td class="input">
+									<input type="radio" name="lostmale">ชาย 
+									<input type="radio" name="lostfemale">หญิง
+								</td>
+							</tr>
+							<tr>
+								<td class="topic">วันที่พบเห็นครั้งสุดท้าย</td>
+								<td class="input">
+									<input type="date" name="lostday">
+								</td>
+							</tr>
+							<tr>
+								<td class="topic">รายละเอียดเพิ่มเติม</td>
+								<td class="input">
+									<textarea rows="5" cols="25" name="lostinfo" maxlength="300"></textarea>
+								</td>
+							</tr>
+							<tr>
+								<td class="topic">ชื่อ - สกุล ผู้ลงประกาศ</td>
+								<td class="input">
+									<input type="text" name="ownername">
+								</td>
+							</tr>
+							<tr>
+								<td class="topic">เบอร์ติดต่อ</td>
+								<td class="input"> <input type="text" name="ownertel"></td>
+							</tr>
+							<tr>
+								<td class="topic"></td>
+								<td class="input">
+									<input type="Submit" value="Post" onclick="">
+								</td>
+							</tr>
 					
-					ชื่อ - สกุล (ผู้ประกาศ) <input type="text" name="ownername"></br>
-					เบอร์โทรศัพท์ (สำหรับติดต่อกลับ) <input type="text" name="ownertel"></br>
-					ช่องทางอื่นๆ (สำหรับติดต่อกลับ)<input type="textarea" name="ownerinfo"></br>
-					
-					<input type="Submit" value="Post" onclick=""></br>
+						</table>
+					</fieldset>
 				</form>
 			</div>
 		</div>
