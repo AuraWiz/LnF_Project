@@ -1,0 +1,74 @@
+body {
+	background-color:#121424;
+	color: #d8daf0;
+}
+
+#header {
+    position: relative;
+    height: 70px;
+    margin-bottom: 20px;
+}
+#pagearea{
+	width: 80%;
+	margin: 0 10% 0 10%;
+}
+
+#nav-bar {
+    width: 100%;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: solid 1px #333;
+    background: -webkit-gradient(linear, left top, left bottom, from(#b1b7e0), to(#605e7d));
+    background: -moz-linear-gradient(top, #b1b7e0, #605e7d);
+    background: linear-gradient(-90deg, #b1b7e0, #605e7d);
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    border-radius: 8px;
+    /*-webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.3);
+    -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.3);
+    box-shadow: inset 0 1px 0 rgba(255,255,255,.3), 0 1px 0 rgba(0,0,0,.3), 0 1px 3px rgba(0,0,0,.3);*/
+}
+
+
+div {
+    display: block;
+}
+
+ul li {
+	display: inline-block;
+}
+
+.menustyle{
+	padding: 5px 50px;
+	color: #d8daf0;
+	font-size: 18 px;
+	font-family: Arial;
+	text-decoration:none;
+	display:block;
+	font-weight: bold;
+	text-shadow: 2px 2px 1px #121424;
+}
+
+hr.splitsection{
+	margin-top: 50px;
+	margin-bottom: 30px;
+}
+
+.inputbox{
+	width: 100px;
+	text-align:left;
+}
+
+.search{
+	width: 250px;
+}
+
+.FormArea{
+	text-align:center;
+}
+
+a.noneunderline{
+	text-decoration:none;
+	color: #fff;
+}
