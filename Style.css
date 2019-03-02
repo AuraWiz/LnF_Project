@@ -66,6 +66,7 @@ hr.splitsection{
 
 .FormArea{
 	text-align:center;
+	display: block;
 }
 
 a.noneunderline{
