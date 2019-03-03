@@ -33,7 +33,9 @@
 		  $sql2 = "INSERT INTO user_master (user, password, fname, lname, email, status) 
 			VALUES ('$myusername', '$mypassword', '$myfname','$mylname','$mymail', '2')";
 			$result2 = mysqli_query($db,$sql2);
-			
+			$_SESSION['login_user'] = $myusername;
+			$_SESSION['login_status'] = 1;
+			$posid = 0;
 		header("location: Profile.php");
 	  }
 		
