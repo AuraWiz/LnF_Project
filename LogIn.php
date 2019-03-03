@@ -20,6 +20,7 @@
 			if($count == 1) {
 				$_SESSION['login_user'] = $myusername;
 				$_SESSION['login_status'] = 1;
+				$posid = 0;
 				header("location:Profile.php");
 			}else{
 				$errornoct = "Your Login Name or Password is invalid";
