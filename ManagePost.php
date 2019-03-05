@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <?php
-   /* include("ConnectDB.php");
+   include("ConnectDB.php");
    session_start();
-   $sqlchk = "SELECT * FROM post_master_attr where owner = '$owner'";
-	$result = mysqli_query($db,$sqlchk);
-	$count = mysqli_num_rows($result);
-	$row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-	$active = $row['active']; */
 ?>
 <html>
 	<head>
@@ -48,12 +43,11 @@
 							
 				
 				<?
-					include("ConnectDB.php");
-				   session_start();
 				   $owner = $_SESSION['login_user'];
-				   $sqlchk = "SELECT * FROM post_master_attr where owner = '$owner' ORDER BY last_update DESC";
-					$result = mysqli_query($db,$sqlchk);
-					while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
+				   $sqlsl = "SELECT * FROM post_master_attr where owner = '$owner' ORDER BY last_update DESC";
+				   
+					$result = mysqli_query($db,$sqlsl);
+					while($row = mysqli_fetch_array($result)){
 						?>
 							<tr>
 								<td class="topic" >
@@ -67,6 +61,10 @@
 									<b>หากพบตัวติดต่อได้ที่คุณ</b> <?echo $row['contact_name'];?> </br>
 									<b>เบอร์</b> <?echo $row['contact_tel'];?></br>
 									
+									<?
+										echo "<a href='DelPost.php?id=$row[postid]'>Delete</a><br>";
+										echo "<a href='UpdateNotice.php?id=$row[postid]'>Edit</a>";
+									?>
 								</td>
 							</tr>
 						<?
