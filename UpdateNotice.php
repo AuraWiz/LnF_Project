@@ -57,13 +57,11 @@
 						  
 						  if(empty($error)==true){
 							 $path="img/";
-							 $type = strrchr($_FILES['lostpic']['name'],".");
-							 $newname = $posid.$type;
+							 $type = strrchr($file_name,".");
+							 //$newname = $posid.$type;
 							 //$path_copy = $path.$newname;
-							// move_uploaded_file($file_tmp,$path_copy); 
 							$path_copy = $path.$file_name;
 							move_uploaded_file($file_tmp,$path_copy);
-								$error = $sqlchk."|".$path.$newname;
 						  }
 					}
 					
