@@ -64,7 +64,7 @@
 					include("ConnectDB.php");
 				   session_start();
 				   //$owner = $_SESSION['login_user'];
-				   $sqlchk = "SELECT * FROM post_master_attr ORDER BY last_update DESC";
+				   $sqlchk = "SELECT * FROM post_master ORDER BY last_update DESC";
 					$result = mysqli_query($db,$sqlchk);
 					while($row = mysqli_fetch_array($result,MYSQLI_ASSOC)){
 						?>
