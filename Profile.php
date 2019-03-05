@@ -22,6 +22,7 @@
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
 		<meta http-equiv="Content-Type" content="text/html; charset=windows-874">
 		<meta http-equiv="Content-Type" content="text/html; charset=tis-620">
+		
 	</head>
 	
 	<body>
@@ -53,36 +54,52 @@
 			<div class="FormArea">
 				<h1>Profile</h1></br>
 				<table class="inputform">
-							<tr>
-								<td class="topic"></td>
-								<td class="input"></td>
-							</tr>
-							<tr>
-								<td class="topic">First name</td>
-								<td class="input">
-									<? echo $row['fname'];?>
-								</td>
-							</tr>
-							<tr>
-								<td class="topic">Last name</td>
-								<td class="input">
-									<? echo $row['lname'];?>
-								</td>
-							</tr>
-							<tr>
-								<td class="topic">Email</td>
-								<td class="input">
-									<? echo $row['email'];?>
-								</td>
-							</tr>
-							<tr>
-								<td class="topic">Username</td>
-								<td class="input">
-									<? echo $user;?>
-								</td>
-							</tr>
-							
-						</table>
+						<tr>
+							<td class="topic"></td>
+							<td class="input"></td>
+						</tr>
+						<tr>
+							<td class="topic">First name</td>
+							<td class="input">
+								<? echo $row['fname'];?>
+							</td>
+						</tr>
+						<tr>
+							<td class="topic">Last name</td>
+							<td class="input">
+								<? echo $row['lname'];?>
+							</td>
+						</tr>
+						<tr>
+							<td class="topic">Email</td>
+							<td class="input">
+								<? echo $row['email'];?>
+							</td>
+						</tr>
+						<tr>
+							<td class="topic">Username</td>
+							<td class="input">
+								<? echo $user;?>
+							</td>
+						</tr>
+						<tr>
+							<td class="topic"></td>
+							<td class="input">
+								<?php
+									$content = file_get_contents("http://api.openweathermap.org/data/2.5/weather?id=1609350&appid=a0cf15ae70f37b25435af5950cd1624e");
+									$list = json_decode($content);
+									$temp = $list->main->temp;
+									$desc = $list->weather[0]->description;
+									$main = $list->weather[0]->main;
+									echo "Today, ".ceil($temp- 273.15)." celsius</br>";
+									echo $list;
+								?>
+							</td>
+						</tr>	
+				</table>
+				<a>	
+				
+				</a>
 			</div>
 		</div>		
 	</body>
