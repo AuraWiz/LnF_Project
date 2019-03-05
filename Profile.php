@@ -91,8 +91,7 @@
 									$temp = $list->main->temp;
 									$desc = $list->weather[0]->description;
 									$main = $list->weather[0]->main;
-									echo "Today, ".ceil($temp- 273.15)." celsius</br>";
-									echo $list;
+									echo "Today, ".ceil($temp- 273.15)." celsius</br>".$desc;
 								?>
 							</td>
 						</tr>	
