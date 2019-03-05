@@ -44,7 +44,7 @@
 				
 				<?
 				   $owner = $_SESSION['login_user'];
-				   $sqlsl = "SELECT * FROM post_master_attr where owner = '$owner' ORDER BY last_update DESC";
+				   $sqlsl = "SELECT * FROM post_master where owner = '$owner' ORDER BY last_update DESC";
 				   
 					$result = mysqli_query($db,$sqlsl);
 					while($row = mysqli_fetch_array($result)){
