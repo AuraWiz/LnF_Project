@@ -4,7 +4,7 @@
    session_start();
    if($_SESSION['login_status'] == 1){
 		$id = $_REQUEST["id"];
-		  $sqlchk = "SELECT * FROM post_master_attr where postid = '$id'";
+		  $sqlchk = "SELECT * FROM post_master where postid = '$id'";
 		  $result = mysqli_query($db,$sqlchk);
 		  $count = mysqli_num_rows($result);
 		  $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
@@ -93,7 +93,7 @@
 						  }
 					}
 			  if($count == 0){
-				  $sql = "INSERT INTO post_master_attr (postid, lost_name, lost_gender, lost_date, lost_info, contact_name, contact_tel, lost_pic, create_date, last_update,owner) 
+				  $sql = "INSERT INTO post_master (postid, lost_name, lost_gender, lost_date, lost_info, contact_name, contact_tel, lost_pic, create_date, last_update,owner) 
 				  VALUES ('$posid', '$lost_name', '$lost_gender', '$lostday', '$lostinfo', '$ownername', '$ownertel', '$path_copy', '$timestamp', '$timestamp','$owner')";
 				  $result = mysqli_query($db,$sql);
 				  $posid = 0;
@@ -102,7 +102,7 @@
 				  
 				  
 			  }else{
-				  $sql = "UPDATE post_master_attr SET lost_name='$lost_name',lost_gender='$lost_gender',lost_date='$lostday',lost_info='$lostinfo',contact_name='$ownername',contact_tel='$ownertel',last_update='$timestamp'
+				  $sql = "UPDATE post_master SET lost_name='$lost_name',lost_gender='$lost_gender',lost_date='$lostday',lost_info='$lostinfo',contact_name='$ownername',contact_tel='$ownertel',last_update='$timestamp'
 				  WHERE postid='$posid'";
 				 $result = mysqli_query($db,$sql);
 				  $posid = 0;
